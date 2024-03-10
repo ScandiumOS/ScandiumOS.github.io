@@ -81,10 +81,10 @@ body {
 }
 
 .hero-img {
-  position: fixed;
+  position: absolute;
   max-height: 8irem !important;
-  right: 230px;
-  bottom: 460px;
+  right: 75px;
+  bottom: 250px;
   width: 100px;
   padding: 20px;
 }
