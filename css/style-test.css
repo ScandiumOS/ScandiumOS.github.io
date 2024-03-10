@@ -83,10 +83,10 @@ body {
 .hero-img {
   position: absolute;
   max-height: 8irem !important;
-  right: 75px;
+  right: 0px;
   bottom: 250px;
-  width: 100px;
-  padding: 20px;
+  width: 100px; 
+  padding: 100%;
 }
 
 .hero-content {
