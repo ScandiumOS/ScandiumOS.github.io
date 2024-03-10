@@ -56,7 +56,7 @@ body {
 
 .navbar-logo {
   max-height: 8irem !important;
-  width: 100px;
+  width: 50px;
 }
 
 .navbar-item:hover {
@@ -81,10 +81,12 @@ body {
 }
 
 .hero-img {
-  position: absolute;
-  bottom: 200px;
-  right: 150px;
-  max-height:80vh
+  position: fixed;
+  max-height: 8irem !important;
+  right: 230px;
+  bottom: 460px;
+  width: 100px;
+  padding: 20px;
 }
 
 .hero-content {
