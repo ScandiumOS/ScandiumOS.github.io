@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return acc;
             }, {});
 
-            const deviceInfoResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS-14/ScandiumOS.github.io/scandium-dev/assets/json/devices.json');
+            const deviceInfoResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS/ScandiumOS.github.io/scandium-dev/assets/json/devices.json');
             if (!deviceInfoResponse.ok) throw new Error(`HTTP error! status: ${deviceInfoResponse.status} for device info list`);
             let deviceInfoText = await deviceInfoResponse.text();
             deviceInfoText = deviceInfoText.replace(/,(\s*[\]}])/g, '$1'); 
