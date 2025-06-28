@@ -1,0 +1,14 @@
+[
+  {
+    "url": "archive.html",
+    "title": "Karawang 1.0 (Coming Soon)",
+    "subtitle": "Initial 1.0 source, ready to build soon.",
+    "tags": ["Release"]
+  },
+  {
+    "url": "archive.html",
+    "title": "Karawang 2.0 (Beta Release)",
+    "subtitle": "Initial 2.0 source ready to build, get source on github.",
+    "tags": ["Release"]
+  }
+]

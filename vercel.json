@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "index.html" },
+    { "source": "/home", "destination": "index.html" },
+    { "source": "/archive", "destination": "archive.html" },
+    { "source": "/about", "destination": "about.html" },
+    { "source": "/download", "destination": "download.html" },
+    { "source": "/wiki", "destination": "wiki.html" }
+  ]
+}

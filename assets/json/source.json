@@ -1,0 +1,12 @@
+[
+  {
+    "date": "28 June 2025",
+    "title": "ScandiumOS 2.0",
+    "codename": "karawang",
+    "description": "Initial beta source release.",
+    "link": "https://github.com/ScandiumOS-14/manifest/tree/14",
+    "tags": [
+      "release"
+    ]
+  }
+]

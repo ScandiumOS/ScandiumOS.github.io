@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="description" content="ScandiumOS - About Us. A team of independent developers building innovative software." />
+    <title data-i18n-key="pageTitle">ScandiumOS | About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/about.css">
+  </head>
+  <body class="antialiased overflow-x-hidden">
+
+    <nav class="navbar p-4 shadow-xl sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="navbar-brand tracking-wide" href="index.html">ScandiumOS</a>
+
+        <div class="hidden md:flex space-x-6 items-center">
+          <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="index.html" data-i18n-key="navHome">Home</a>
+          <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="wiki.html" data-i18n-key="navWiki">Wiki</a>
+          <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="download.html" data-i18n-key="navDownload">Download</a>
+          <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="archive.html" data-i18n-key="navArchive">Archive</a>
+          <a class="nav-link active font-semibold border-b-2 border-cyan-400 pb-1" href="about.html" data-i18n-key="navAbout">About Us</a>
+        </div>
+
+        <div class="hidden md:flex space-x-4 items-center">
+          <a class="text-gray-300 hover:text-cyan-400 transition duration-300 ease-in-out transform hover:scale-110" href="https://github.com/ScandiumOS-14" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a class="text-gray-300 hover:text-cyan-400 transition duration-300 ease-in-out transform hover:scale-110" href="https://t.me/s/ScandiumOS" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <i class="fab fa-telegram fa-lg"></i>
+          </a>
+
+          <div class="relative">
+            <button id="language-toggle" class="p-2 rounded-full theme-lang-button transition duration-300 ease-in-out focus:outline-none flex items-center space-x-2">
+                <i class="fas fa-globe"></i>
+                <span id="current-lang">EN</span>
+                <i class="fas fa-chevron-down text-sm"></i>
+            </button>
+            <div id="language-dropdown" class="absolute right-0 mt-2 w-32 rounded-md shadow-lg hidden z-10">
+                <a href="#" class="block px-4 py-2" data-lang="en">English</a>
+                <a href="#" class="block px-4 py-2" data-lang="id">Bahasa Indonesia</a>
+            </div>
+          </div>
+        </div>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-cyan-400 transition duration-300 focus:outline-none" aria-label="Toggle menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <div id="mobile-menu-links" class="md:hidden hidden mt-4 py-2 rounded-lg">
+        <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="index.html" data-i18n-key="navHome">Home</a>
+        <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="wiki.html" data-i18n-key="navWiki">Wiki</a>
+        <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="download.html" data-i18n-key="navDownload">Download</a>
+        <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="archive.html" data-i18n-key="navArchive">Archive</a>
+        <a class="nav-link active block px-4 py-2 border-l-4 border-cyan-400 hover:bg-gray-600" href="about.html" data-i18n-key="navAbout">About Us</a>
+        <div class="border-t border-gray-600 my-2"></div>
+        <a class="nav-link flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-600" href="https://github.com/ScandiumOS" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> <span data-i18n-key="socialGithub">GitHub</span>
+        </a>
+        <a class="nav-link flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-600" href="https://t.me/s/ScandiumOS" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-telegram"></i> <span data-i18n-key="socialTelegram">Telegram</span>
+        </a>
+        <div class="flex justify-center mt-4">
+            <div class="relative ml-4">
+                <button id="language-toggle-mobile" class="p-2 rounded-full theme-lang-button transition duration-300 ease-in-out focus:outline-none flex items-center justify-center space-x-1 pr-2">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang-mobile">EN</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="language-dropdown-mobile" class="absolute left-0 mt-2 w-32 rounded-md shadow-lg hidden z-10">
+                    <a href="#" class="block px-4 py-2" data-lang="en">English</a>
+                    <a href="#" class="block px-4 py-2" data-lang="id">Bahasa Indonesia</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-16">
+      <section class="text-center mb-20">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight animate__animated animate__fadeInDown">
+          <span class="bg-clip-text text-transparent text-gradient-switch" data-i18n-key="aboutTitlePart1">About</span> <span class="text-white" data-i18n-key="aboutTitlePart2">ScandiumOS</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-14 max-w-4xl mx-auto leading-relaxed animate__animated animate__fadeInUp animate__delay-0.5s" data-i18n-key="aboutDescription">
+          We are a passionate team of developers, designers, and open-source enthusiasts dedicated to creating a better computing experience for everyone. ScandiumOS is our vision for an operating system that is powerful yet simple, secure yet open.
+        </p>
+      </section>
+
+      <section>
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12 animate__animated animate__fadeIn animate__delay-1s" data-i18n-key="teamTitle">
+            Meet Our Core Team
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.2s">
+              <img src="assets/img/members/rayhan.png" alt="Rayhan77" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">Rayhan77</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleFounder">Founder</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/SayuZX" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Rayhan77 GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/akemiinawa" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Rayhan77 Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.3s">
+              <img src="https://avatars.githubusercontent.com/u/155278452?v=4" alt="PGYT PROJECT" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">PGYT PROJECT</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleLeadDev">Co-founder &amp; Lead Developer</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/KernelBuilding" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="PGYT PROJECT GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/ProjectKernel3" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="PGYT PROJECT Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.4s">
+              <img src="https://avatars.githubusercontent.com/u/166203936?v=4" alt="Joko" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">Joko</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleUIDesigner">UI/UX Designer</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/jokonotobot0" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Joko GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/jokonotoboto" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Joko Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.5s">
+              <img src="https://avatars.githubusercontent.com/u/119201284?v=4" alt="Piccaso09" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">Piccaso09</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleServerMgr">Server Manager</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/picasso09" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Piccaso09 GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/picasso170606" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Piccaso09 Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.6s">
+              <img src="https://avatars.githubusercontent.com/u/184234847?v=4" alt="M • O • E • B • I • U • S" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">M • O • E • B • I • U • S</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleUIDesigner2">UI/UX Designer</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/ZegatID" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="M • O • E • B • I • U • S GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/BebasAjg" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="M • O • E • B • I • U • S Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.7s">
+              <img src="https://avatars.githubusercontent.com/u/137809113?v=4" alt="Adit" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">Adit</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleDesignDev">Design Manager &amp; Developer</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/adit4321204" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Adit GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/RzaIXX" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Adit Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="card-custom text-center animate__animated animate__zoomIn animate__delay-1.8s">
+              <img src="https://avatars.githubusercontent.com/u/94852446?v=4" alt="Faris Budiman" class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-cyan-400 shadow-lg object-cover"/>
+              <h3 class="text-2xl font-bold text-white mb-1">Faris Budiman</h3>
+              <p class="text-cyan-400 text-lg" data-i18n-key="roleDesignDev2">Design Manager &amp; Developer</p>
+              <div class="flex justify-center space-x-3 mt-4">
+                <a href="https://github.com/RIZZKUNNN" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Faris Budiman GitHub profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="https://t.me/Rizzxxyy" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-cyan-400 transition transform hover:scale-110" aria-label="Faris Budiman Telegram profile">
+                    <i class="fab fa-telegram-plane fa-lg"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-10 mt-20 text-center text-gray-400">
+      <div class="container mx-auto">
+        <p class="text-base leading-relaxed" data-i18n-key="footerCopyright">ScandiumOS © 2025<br>Designed By ScandiumOS Team</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/about.js"></script>
+  </body>
+</html>

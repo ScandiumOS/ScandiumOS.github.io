@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="ScandiumOS is an AOSP based custom ROM, focused on performance and customization.">
+  <meta name="keywords" content="ScandiumOS, OpenSource, Custom ROM, Android, Gaming, Performance, Customization, Wiki">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="ScandiumOS">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A new experience awaits you. Give a new life to your phone. Faster and better-looking than ever.">
+  <meta property="og:url" content="index.html">
+  <meta property="og:site_name" content="ScandiumOS">
+  <title data-i18n-key="pageTitle">ScandiumOS</title>
+  <link rel="shortcut icon" href="assets/img/logo.png">
+  <link rel="canonical" href="index.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body class="antialiased">
+
+  <nav class="navbar p-4 shadow-xl sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="navbar-brand tracking-wide" href="index.html" data-i18n-key="navbarBrand">ScandiumOS</a>
+
+      <div class="hidden md:flex space-x-6 items-center">
+        <a class="nav-link active font-semibold border-b-2 border-cyan-400 pb-1" href="index.html" data-i18n-key="navHome">Home</a>
+        <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="wiki.html" data-i18n-key="navWiki">Wiki</a>
+        <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="download.html" data-i18n-key="navDownload">Download</a>
+        <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="archive.html" data-i18n-key="navArchive">Archive</a>
+        <a class="nav-link hover:text-cyan-400 transition duration-300 ease-in-out" href="about.html" data-i18n-key="navAbout">About Us</a>
+      </div>
+
+      <div class="hidden md:flex space-x-4 items-center">
+        <a class="text-gray-300 hover:text-cyan-400 transition duration-300 ease-in-out" href="https://github.com/ScandiumOS-14" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a class="text-gray-300 hover:text-cyan-400 transition duration-300 ease-in-out" href="https://t.me/s/ScandiumOS" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <i class="fab fa-telegram fa-lg"></i>
+        </a>
+        <div class="relative">
+          <button id="language-toggle" class="p-2 rounded-full theme-lang-button transition duration-300 ease-in-out focus:outline-none flex items-center space-x-2">
+              <i class="fas fa-globe"></i>
+              <span id="current-lang">EN</span>
+              <i class="fas fa-chevron-down text-sm"></i>
+          </button>
+          <div id="language-dropdown" class="absolute right-0 mt-2 w-32 rounded-md shadow-lg hidden z-10">
+              <a href="#" class="block px-4 py-2" data-lang="en">English</a>
+              <a href="#" class="block px-4 py-2" data-lang="id">Bahasa Indonesia</a>
+          </div>
+        </div>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-cyan-400 transition duration-300 focus:outline-none" aria-label="Toggle menu" aria-controls="mobile-menu-links" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu-links" class="md:hidden hidden mt-4 py-2 rounded-lg">
+      <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="index.html" data-i18n-key="navHome">Home</a>
+      <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="wiki.html" data-i18n-key="navWiki">Wiki</a>
+      <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="download.html" data-i18n-key="navDownload">Download</a>
+      <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="archive.html" data-i18n-key="navArchive">Archive</a>
+      <a class="nav-link block px-4 py-2 hover:bg-gray-600" href="about.html" data-i18n-key="navAbout">About Us</a>
+      <div class="border-t border-gray-600 my-2"></div>
+      <a class="nav-link flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-600" href="https://github.com/ScandiumOS-14" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> <span data-i18n-key="socialGithub">GitHub</span>
+      </a>
+      <a class="nav-link flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-600" href="https://t.me/s/ScandiumOS" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-telegram"></i> <span data-i18n-key="socialTelegram">Telegram</span>
+      </a>
+      <div class="flex justify-center mt-4">
+          <div class="relative ml-4">
+              <button id="language-toggle-mobile" class="p-2 rounded-full theme-lang-button transition duration-300 ease-in-out focus:outline-none flex items-center justify-center space-x-1 pr-2">
+                  <i class="fas fa-globe"></i>
+                  <span id="current-lang-mobile">EN</span>
+                  <i class="fas fa-chevron-down text-xs"></i>
+              </button>
+              <div id="language-dropdown-mobile" class="absolute left-0 mt-2 w-32 rounded-md shadow-lg hidden z-10">
+                  <a href="#" class="block px-4 py-2" data-lang="en">English</a>
+                  <a href="#" class="block px-4 py-2" data-lang="id">Bahasa Indonesia</a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow">
+    <section id="hero-section">
+      <div class="hero-content">
+        <div class="hero-title">
+          <span data-i18n-key="heroLine1">A new</span><br>
+          <span data-i18n-key="heroLine2">experience</span><br>
+          <span data-i18n-key="heroLine3">awaits </span><span class="text-cyan-400" data-i18n-key="heroLine4">you</span><span data-i18n-key="heroLine5">.</span>
+        </div>
+        <div class="hero-subtitle">
+          <span data-i18n-key="heroSub1">Give a new life to your phone</span><br>
+          <span data-i18n-key="heroSub2">Faster and better-looking than ever</span>
+        </div>
+        <div>
+          <a class="download-btn-hero" href="download.html" data-i18n-key="downloadNow">Download now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="feature-image-container">
+            <img class="w-full h-auto" src="assets/img/ss.jpg" alt="Screenshot of ScandiumOS">
+          </div>
+          <div>
+            <h1 class="text-5xl font-extrabold mb-6" data-i18n-key="builtToInspireTitle">Built to inspire</h1>
+            <p class="text-lg text-gray-300 mb-8" data-i18n-key="builtToInspireLead">
+              ScandiumOS is an operating system based on the Android Open Source Project, built with a unique look and maintaining top-notch performance.
+            </p>
+            <div>
+              <div class="feature-card-custom">
+                <h2 data-i18n-key="dailyUsageTitle">Ready for daily usage</h2>
+                <p data-i18n-key="dailyUsageText">We have refined every detail to make your experience effortless and enjoyable.</p>
+              </div>
+              <div class="feature-card-custom">
+                <h2 data-i18n-key="lightweightTitle">Lightweight</h2>
+                <p data-i18n-key="lightweightText">No clutter or bloatware, just the core essentials. You decide what stays on your device.</p>
+              </div>
+              <div class="feature-card-custom">
+                <h2 data-i18n-key="intuitiveTitle">Intuitive</h2>
+                <p data-i18n-key="intuitiveText">We built an interface that stands out from the rest. It’s completely new yet familiar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-section">
+      <div class="container mx-auto px-6">
+        <div class="ui-heading">
+          <h1 data-i18n-key="scandiumUiTitle">The new ScandiumUI experience</h1>
+          <p data-i18n-key="scandiumUiLead">A completely new user interface, designed to be seamless.</p>
+        </div>
+
+        <div class="ui-content-block">
+          <div class="ui-image-container">
+            <img src="assets/img/ui/qs_dark.png" alt="Control Center">
+          </div>
+          <div class="ui-text-content">
+            <h2 data-i18n-key="controlCenterTitle">Control Center</h2>
+            <p data-i18n-key="controlCenterText1">Quick access to settings, music, and notifications all in one place.</p>
+            <p data-i18n-key="controlCenterText2">A monochromatic color palette combined with a dynamically blurred background gives you a focused panel experience.</p>
+          </div>
+        </div>
+
+        <div class="ui-content-block reverse">
+          <div class="ui-video-container">
+            <video id="volume-video" class="w-full h-auto rounded-md" loop playsinline muted preload="metadata" autoplay>
+              <source src="assets/visual/volume_dialog_light.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="ui-text-content">
+            <h2 data-i18n-key="mediaControlsTitle">Media Controls</h2>
+            <p data-i18n-key="mediaControlsText">A much more minimalistic volume panel with a new elegant look and an embedded quick music player allows you to interact seamlessly with your media.</p>
+          </div>
+        </div>
+
+        <div class="ui-content-block">
+          <div class="ui-image-container">
+            <img src="assets/img/ui/home_dark.png" alt="Scandium Launcher">
+          </div>
+          <div class="ui-text-content">
+            <h2 data-i18n-key="scandiumLauncherTitle">Scandium Launcher</h2>
+            <p data-i18n-key="scandiumLauncherText">This is a lightweight system for your device very simple yet elegant. It helps you organize your apps and can be customized with widgets and icon packs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 mt-10 text-center text-gray-400">
+    <div class="container mx-auto">
+      <p class="text-base leading-relaxed" data-i18n-key="footerCopyright">ScandiumOS © 2025<br>Designed By ScandiumOS Team</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

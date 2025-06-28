@@ -1,0 +1,77 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #0F172A, #1E293B);
+  color: #e2e8f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card-custom {
+  background-color: #1f2937;
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.card-custom:hover {
+  background-color: #2a3442;
+  box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.3), 0 15px 20px -8px rgba(0, 0, 0, 0.15);
+}
+.navbar {
+  background-color: #1a202c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar .nav-link, .navbar .navbar-brand, .navbar .fa-lg {
+  color: #e2e8f0 !important;
+}
+.navbar .nav-link.active {
+  color: #22d3ee !important;
+}
+#mobile-menu-links {
+    background-color: #1a202c;
+}
+#mobile-menu-links a {
+    color: #e2e8f0;
+}
+#mobile-menu-links a:hover {
+    background-color: #2d3748;
+}
+.theme-lang-button {
+    background-color: #334155;
+    color: #e2e8f0;
+}
+.theme-lang-button:hover {
+    background-color: #475569;
+}
+#language-dropdown {
+    background-color: #1f2937;
+}
+#language-dropdown a {
+    color: #e2e8f0;
+}
+#language-dropdown a:hover {
+    background-color: #2a3442;
+}
+
+.card-custom {
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+
+.text-cyan-400 {
+  color: #22d3ee;
+}
+.border-cyan-400 {
+  border-color: #22d3ee;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.75rem;
+}
+
+.text-gradient-switch {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #22d3ee, #3b82f6);
+}
