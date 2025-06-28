@@ -1,13 +1,15 @@
 [
   {
     "url": "#",
-    "title": "Karawang 1.0 (Coming Soon)",
+    "title": "Holocaust 1.0 (Coming Soon)",
+    "codename": "Holocaust",
     "subtitle": "Initial 1.0 source, ready to build soon.",
     "tags": ["Release"]
   },
   {
     "url": "https://github.com/ScandiumOS-14/manifest/tree/14",
     "date": "28 June 2025",
+    "codename": "karawang",
     "title": "Karawang 2.0 (Beta Release)",
     "subtitle": "Initial 2.0 source ready to build, get source on github.",
     "tags": ["Release"]
