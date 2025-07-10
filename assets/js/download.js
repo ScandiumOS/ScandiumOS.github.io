@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentLang = localStorage.getItem('lang') || 'en';
 
         try {
-            const maintainerResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS-14/scandium-maintainer/14/scandium.maintainer');
+            const maintainerResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS-14/sc_maintainership/14/scandium.maintainer');
             if (!maintainerResponse.ok) throw new Error(`HTTP error! status: ${maintainerResponse.status} for maintainer data`);
             const maintainerText = await maintainerResponse.text();
             maintainerMap = maintainerText.split('\n').reduce((acc, line) => {
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return acc;
             }, {});
 
-            const devicesResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS-14/scandium-maintainer/14/scandium.devices');
+            const devicesResponse = await fetch('https://raw.githubusercontent.com/ScandiumOS-14/sc_maintainership/14/scandium.devices');
             if (!devicesResponse.ok) throw new Error(`HTTP error! status: ${devicesResponse.status} for device list`);
             const deviceCodenames = (await devicesResponse.text()).split('\n').map(c => c.trim()).filter(c => c.length > 0);
 
